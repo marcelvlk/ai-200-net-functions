@@ -5,19 +5,19 @@ using Microsoft.Extensions.Logging;
 
 namespace ai_200_net_functions;
 
-public class HttpTrigger1
+public class HttpTrigger2
 {
-    private readonly ILogger<HttpTrigger1> _logger;
+    private readonly ILogger<HttpTrigger2> _logger;
 
-    public HttpTrigger1(ILogger<HttpTrigger1> logger)
+    public HttpTrigger2(ILogger<HttpTrigger2> logger)
     {
         _logger = logger;
     }
 
-    [Function("HttpTrigger1")]
+    [Function("HttpTrigger2")]
     public IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequest req)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
-        return new OkObjectResult("Welcome to Azure Functions - HttpTrigger1!");
+        return new OkObjectResult("Welcome to Azure Functions - HttpTrigger2!");
     }
 }
