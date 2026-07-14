@@ -13,6 +13,14 @@
       "type": "storage.azure",
       "connectionId": "StorageConnection",
       "dynamicId": null
+    },
+    "storage2": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('serviceConnectorResourceGroupName')]/providers/Microsoft.ServiceLinker/locations/westeurope/connectors/ConnectionStringBlobTrigger1_B401B862F6, /subscriptions/df0747cc-c342-4a34-bb12-50dcd3c29e3c/resourceGroups/AI-200/providers/Microsoft.ServiceLinker/locations/westeurope/connectors/ConnectionStringBlobTrigger1_100AC1976D",
+      "secretStore": "LocalSecretsFile",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/stoaccai200",
+      "type": "storage.azure",
+      "connectionId": "ConnectionStringBlobTrigger1",
+      "dynamicId": null
     }
   }
 }
