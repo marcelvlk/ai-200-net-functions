@@ -15,9 +15,9 @@ public class BlobTrigger1
     }
 
     [Function(nameof(BlobTrigger1))]
-    public async Task Run([BlobTrigger("container1/{name}", Connection = "ConnectionStringBlobTrigger1")] Stream stream, string name)
+    public async Task Run([BlobTrigger("container1/{name}", Connection = "AzureWebJobsStorage")] Stream stream, string name)
     {
-        _logger.LogInformation("C# Blob trigger function.");
+        _logger.LogInformation("C# BlobTrigger1 function triggered.");
         using var blobStreamReader = new StreamReader(stream);
         var content = await blobStreamReader.ReadToEndAsync();
         _logger.LogInformation("C# Blob trigger function Processed blob\n Name: {name} \n Data: {content}", name, content);
