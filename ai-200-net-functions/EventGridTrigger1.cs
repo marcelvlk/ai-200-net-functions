@@ -22,6 +22,9 @@ public class EventGridTrigger1
     public void Run([EventGridTrigger] EventGridEvent eventGridEvent)
     {
         _logger.LogInformation("C# EventGridTrigger1 function triggered.");
-        _logger.LogInformation("Event type: {type}, Event subject: {subject}", eventGridEvent.EventType, eventGridEvent.Subject);
+        _logger.LogInformation("Event type: {type}", eventGridEvent.EventType);
+        _logger.LogInformation("Event topic: {topic}", eventGridEvent.Topic);
+        _logger.LogInformation("Event subject: {subject}", eventGridEvent.Subject);
+        _logger.LogInformation("Event data: {data}", eventGridEvent.Data);
     }
 }
